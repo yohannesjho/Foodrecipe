@@ -5,7 +5,7 @@ const RecipeInfo = () => {
   const { id } = useParams();
   const [item, setItem] = useState("");
   if (id !== "") {
-    fetch(`https:/www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then(result => result.json()).then(data => { setItem(data.meals[0]) })
   }
   if (item) {
